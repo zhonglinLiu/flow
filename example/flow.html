@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+<style type="text/css">
+
+#flow{
+    width:1000px;
+    position: relative;
+    margin :0 auto;
+}
+#flow img{
+    width:200px;
+    position: absolute;
+    display: none;
+    border-radius: 2px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+</style>
+</head>
+<body>
+<div id="flow">
+    <img src="b.webp">
+    <img src="a.webp">
+    <img src="c.webp">
+    <img src="b.webp">
+    <img src="a.webp">
+    <img src="c.webp">
+    <img src="b.webp">
+    <img src="a.webp">
+    <img src="c.webp">
+    <img src="b.webp">
+    <img src="a.webp">
+    <img src="c.webp">
+    <img src="b.webp">
+    <img src="a.webp">
+    <img src="c.webp">
+    <img src="b.webp">
+    <img src="a.webp">
+    <img src="c.webp">
+    <img src="b.webp">
+    <img src="a.webp">
+    <img src="c.webp">
+</div>
+<div style="width: 100%;text-align: center;color:#666;display: none;">loading...</div>
+</body>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="flow.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        imageFlow.init({
+            cols:5,
+            scrollBottom: function(images) {
+                // ajax
+                var data = [
+                    {'url':'a.webp'},
+                    {'url':'b.webp'},
+                    {'url':'c.webp'}
+                ];
+                imageFlow.update(data);
+                console.log(2)
+            }
+        });
+    }
+</script>
+</html>
